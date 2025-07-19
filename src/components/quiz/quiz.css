@@ -1,0 +1,130 @@
+.container{
+  width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  color: #262626;
+  margin-top: 60px;
+  gap: 15px;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 2px 6px 18px rgba(0, 0, 0, 0.2);
+  animation: fullContant 0.6s ease-in-out;
+}
+
+@keyframes fullContant {
+  from{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container h1{
+  color: #016f8a;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.container hr{
+  height: 2px;
+  border: none;
+  margin-top: -7px;
+  margin-bottom: 5px;
+  background: #707070;
+}
+
+.container h2{
+  font-size: 22px;
+  font-weight: 500;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.container ul li{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding-left: 15px;
+  border: 1px solid #686868;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  transition: .3s;
+  animation: fadeIn .5s ease alternate;
+}
+
+.container button{
+  margin: auto;
+  width: 240px;
+  height: 50px;
+  background: #00566c;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.container button:hover{
+  background: #016f8a;
+}
+
+.container .index{
+  margin: auto;
+  font-size: 18px;
+}
+
+.container .correct{
+  background: #dffff2;
+  border-color: #00d397;
+  animation: popCorrect 0.4s ease;
+}
+
+.container .wrong{
+  background: #ffebeb;
+  border-color: #ff4a4a;
+  animation: popWrong 0.4s ease;
+}
+
+@keyframes popCorrect {
+  0% {
+    transform: scale(1);
+    background-color: #dffff2;
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes popWrong {
+  0% {
+    transform: scale(1);
+    background-color: #ffebeb;
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
